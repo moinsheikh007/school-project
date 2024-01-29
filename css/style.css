@@ -402,6 +402,19 @@ img {
     .home h1 {
         font-size: 5rem;
     }
+    .subscribe {
+        padding: 0 5%;
+    }
+    .footerInfo {
+        padding: 8rem 5% 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 3rem;
+    }
+    .social i {
+        width: 40px;
+        height: 40px;
+        font-size: 2.5rem;
+    }
 }
 @media screen and (max-width: 800px) {
     .headerInfo {
@@ -434,6 +447,9 @@ img {
         top: 18px;
         right: 2rem;
     }
+    .home h1 {
+        text-align: center;
+    }
     .search {
         display: block;
         z-index: 1;
@@ -444,6 +460,15 @@ img {
     }
     .search input {
         width: 150px;
+    }
+    .subscribe {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+    }
+    .subscribe h3 {
+        text-align: center;
     }
 
 }
@@ -466,5 +491,18 @@ img {
     }
     .homeInput select {
         padding: 1rem 2rem;
+    }
+    .subscribe {
+        height: 250px;
+    }
+    .subscribe h3 {
+        text-align: left;
+    }
+    .footerInfo {
+        justify-items: flex-start;
+    }
+    .copyright {
+        flex-direction: column;
+        gap: 3rem;
     }
 }
