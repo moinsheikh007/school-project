@@ -31,7 +31,7 @@
     background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);
+    background-color: var(--black);
 }
 html {
     font-size: 62.5%;
@@ -47,11 +47,19 @@ section {
     margin: 0 auto;
     max-width: 1200px;
 }
+::placeholder {
+    font-size: 1.5rem;
+}
+img {
+    width: 100%;
+}
 
+/* ===== Header Section Start===== */
 .header {
     width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .headerInfo {
@@ -76,7 +84,11 @@ section {
     font-size: 1.3rem;
     color: var(--white);
 }
-.communicate h3, p {
+.communicate h3{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.communicate p {
     font-size: 1.5rem;
     color: var(--white);
     text-transform: lowercase;
@@ -94,7 +106,7 @@ section {
     background-color: var(--white);
     z-index: 1000;
 }
-.navbar .logo {
+.logo {
     font-size: 3rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -122,6 +134,7 @@ section {
     background-color: var(--main-color);
     color: var(--white);
 }
+
 .navbar ul li a:hover {
     background-color: var(--main-color);
     color: var(--white);
@@ -141,4 +154,317 @@ section {
 
 .navbar ul button i:hover {
     opacity: .5;
+}
+.search {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    padding: 1rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    display: none;
+}
+.search input {
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    width: 400px;
+}
+.search i {
+    font-size: 2.5rem;
+    background-color: var(--light-bg);
+    padding: .9rem 1rem;
+    border-radius: 3px;
+    margin-left: 1rem;
+}
+#menuBar {
+    font-size: 3rem;
+    color: var(--black);
+    display: none;
+}
+#menuBar:hover {
+    opacity: .5;
+}
+/* ===== Header Section End===== */
+
+/* ===== Home Section Start===== */
+.home {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background: url('/images/banner2.jpg'), no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home h1 {
+    font-size: 7rem;
+    letter-spacing: 3px;
+    font-weight: 900;
+    color: transparent;
+    margin-bottom: 1rem;
+    -webkit-text-stroke-color: var(--main-color);
+    -webkit-text-stroke-width: 2px;
+
+}
+.home h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.homeInput {
+    background-color: var(--white);
+    padding: 1.5rem 2rem;
+    border-radius: 4px;
+    display: flex;
+    gap: 1rem;
+}
+.homeInput input {
+    border-right: var(--border);
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.homeInput select {
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.homeSearchBtn {
+    background-color: var(--main-color);
+    margin-top: 1.5rem;
+    padding: 1rem 2.5rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.homeSearchBtn:hover {
+    background-color: var(--light-bg);
+    color: var(--black);
+}
+
+/* ===== Footer Section Start ===== */
+
+.footer {
+    width: 100%;
+    margin-top: 2rem;
+}
+.subscribe {
+    height: 120px;
+    display: flex;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.767), rgba(78, 3, 59, 0.925)),
+    url('/images/smallFoot.png');
+    /* background-size: cover; */
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, .5); */
+    /* opacity: .5; */
+    position: relative;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.subscribe h3 {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+.subscribe p {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.subscribe input {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    width: 300px;
+    border-radius: 3px;
+}
+.subscribe input:focus {
+    border: 2px solid var(--main-color);
+}
+.subscribe button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 3px;
+    background-color: var(--main-color);
+}
+
+.footerInfo {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    padding: 8rem 10% 2rem;
+    background-image: url('/images/footer.jpg');
+    color: var(--white);
+}
+
+.info1 .logo {
+    color: var(--white);
+}
+.info1 p{
+    font-size: 1.5rem;
+    margin: 3rem 0;
+    font-weight: 500;
+}
+.info1 .social {
+    display: flex;
+    gap: 2rem;
+}
+.social i {
+    width: 50px;
+    height: 50px;
+    background-color: var(--black);
+    font-size: 3rem;
+    color: var(--white);
+    text-align: center;
+    line-height: 1.6;
+    border-radius: 50%;
+}
+.info h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 3rem;
+}
+.info p {
+    font-size: 1.3rem;
+    padding: .5rem 0;
+}
+.info p a {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.storeImg {
+    width: 150px;
+    height: auto;
+}
+.copyright {
+    margin-top: 3rem;
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--main-color);
+    padding: 2rem 0;
+}
+.copyright p {
+    font-size: 1.5rem;
+}
+.copyright p span {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.copyInfo {
+    display: flex;
+    gap: 2rem;
+}
+.copyInfo a {
+    color: var(--main-color);
+    font-size: 1.5rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==== Mobile Device === */
+
+@media screen and (max-width: 1024px) {
+    .headerInfo {
+        padding: 0 2rem;
+    }
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    .navbar ul li a {
+        padding: 10px 1rem;
+    }
+    .home h1 {
+        font-size: 5rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .headerInfo {
+        display: none;
+    }
+    .navbar {
+        top: 0;
+        position: relative;
+    }
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--white);
+        width: 500px;
+        height: 370px;
+        display: none;
+    }
+    .navbar ul li {
+        margin-top: 2rem;
+    }
+    .navbar ul button {
+        margin-top: 2rem;
+    }
+    #menuBar {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 2rem;
+    }
+    .search {
+        display: block;
+        z-index: 1;
+        width: 250px;
+        padding: 1rem;
+        top: 150px;
+        display: none;
+    }
+    .search input {
+        width: 150px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .home h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .home h3 {
+        font-size: 2rem;
+    }
+    .homeInput {
+        flex-direction: column;
+        gap: 3rem;
+        background-color: transparent;
+    }
+    .homeInput input {
+        padding: 1rem 2rem;
+    }
+    .homeInput select {
+        padding: 1rem 2rem;
+    }
 }
