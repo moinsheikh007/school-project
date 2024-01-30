@@ -8,7 +8,7 @@
     outline: none;
     text-transform: capitalize;
     text-decoration: none;
-    /* transition: 0.6s ease-in; */
+    /* transition: 0.6s ease; */
 }
 :root {
     --main-color: #2980b9;
@@ -16,7 +16,7 @@
     --light-bg: #eee;
     --black: #2c3e50;
     --white: #fff;
-    --box-shadow: 0, .5rem 1rem rgba(0, 0, 0, .2);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
     --border: .1rem solid rgba(0, 0, 0, .3);
 }
 *::selection {
@@ -98,13 +98,16 @@ img {
     position: fixed;
     top: 42px;
     left: 0;
-    right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 10%;
     background-color: var(--white);
     z-index: 1000;
+}
+.navbar.sticky {
+    top: 0;
+    left: 0;
 }
 .logo {
     font-size: 3rem;
@@ -130,7 +133,7 @@ img {
     color: var(--black);
     border-radius: 4px;
 }
-.navbar ul li.active a {
+.navbar ul li.active2 a {
     background-color: var(--main-color);
     color: var(--white);
 }
@@ -328,6 +331,9 @@ img {
     line-height: 1.6;
     border-radius: 50%;
 }
+.social i:hover {
+    background-color: var(--main-color);
+}
 .info h3 {
     font-size: 2rem;
     font-weight: 800;
@@ -342,6 +348,9 @@ img {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: 500;
+}
+.info p:hover {
+    transform: translateX(5px);
 }
 .storeImg {
     width: 150px;
@@ -373,6 +382,128 @@ img {
     font-size: 1.5rem;
 
 }
+/* ===== Footer Section End ===== */
+
+
+/* ===== E-Learning Section Start ===== */
+
+.e-heading {
+    text-align: center;
+}
+.e-heading h2 {
+    font-size: 4rem;
+    margin: 1rem 0;
+    color: var(--black);
+    font-weight: 600;
+}
+.e-heading p {
+    font-size: 1.5rem;
+}
+.e-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 3rem;
+
+    margin-top: 3rem;
+}
+.e-cards .card {
+    padding: 2rem;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+.e-cards .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--white);
+}
+.card div {
+    text-align: center;
+    margin: 1rem 0;
+}
+.card i {
+    font-size: 8rem;
+    text-align: center;
+}
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.card p {
+    font-size: 1.4rem;
+}
+
+/* ===== E-Learning Section End ===== */
+
+
+/* ====== Popular Online Course Section start ===== */
+.coursesContainer {
+    margin-top: 5rem;
+}
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+.course {
+    background-color: var(--white);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+.course:hover img {
+    transform: scale(1.1);
+}
+.course-info {
+    padding: 2rem;
+    line-height: 2;
+}
+.course-info h3 {
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.course-info h5 {
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+.course-info p {
+    color: var(--black);
+    font-size: 1.4rem;
+}
+.course-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.course-rating div i {
+    font-size: 1.6rem;
+    color: #f1c40f;
+}
+.course-rating div span {
+    color: var(--black);
+    font-size: 1.6rem;
+}
+
+.seeAllCourseBtn {
+    text-align: center;
+    margin-top: 3rem;
+}
+.seeAllCourseBtn a {
+    font-size: 1.6rem;
+    color: var(--white);
+    background-color: var(--main-color);
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+}
+.seeAllCourseBtn a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+/* ====== Popular Online Course Section end ===== */
+
 
 
 
@@ -415,7 +546,13 @@ img {
         height: 40px;
         font-size: 2.5rem;
     }
+    .e-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        gap: 2rem;
+    }
 }
+
+
 @media screen and (max-width: 800px) {
     .headerInfo {
         display: none;
@@ -424,17 +561,20 @@ img {
         top: 0;
         position: relative;
     }
-    .navbar ul {
+    .navlist {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: -400px;
         right: 0;
         background-color: var(--white);
-        width: 500px;
+        width: 400px;
         height: 370px;
-        display: none;
+        /* display: none; */
     }
+   .navlist.active {
+    top: 70px;
+   }
     .navbar ul li {
         margin-top: 2rem;
     }
@@ -469,6 +609,12 @@ img {
     }
     .subscribe h3 {
         text-align: center;
+    }
+    .e-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    }
+    .coursesContainer {
+        margin-top: 0;
     }
 
 }
