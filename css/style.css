@@ -448,7 +448,7 @@ img {
 }
 .course {
     background-color: var(--white);
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: var(--box-shadow);
     overflow: hidden;
 }
@@ -477,6 +477,8 @@ img {
     align-items: center;
     justify-content: space-between;
     margin-top: 1rem;
+    border-top: var(--border);
+    padding-top: 10px;
 }
 .course-rating div i {
     font-size: 1.6rem;
@@ -503,6 +505,231 @@ img {
     color: var(--white);
 }
 /* ====== Popular Online Course Section end ===== */
+
+
+
+/* ====== Registration Section Start ===== */
+.registration {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.767), rgba(78, 3, 59, 0.925)),
+    url('/images/registration-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    margin: 3rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+}
+.regiTest {
+    color: var(--white);
+    flex-basis: 50%;
+}
+.regiTest h2 {
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+.regiTest p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.years {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.year h1 {
+    font-size: 5rem;
+}
+.year h4 {
+    font-size: 1.7rem;
+}
+
+form {
+    height: 100%;
+    background-color: var(--white);
+    width: 400px;
+    padding: 2rem;
+}
+form h2 {
+    font-size: 3rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form input {
+    display: block;
+    border: var(--border);
+    padding: 1.2rem 2rem;
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+form select {
+    display: block;
+    border: var(--border);
+    padding: 1.2rem 2rem;
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+form textarea {
+    display: block;
+    border: var(--border);
+    padding: 1.2rem 2rem;
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+form input[type="submit"] {
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+form input[type="submit"]:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+form select option {
+    color: var(--black);
+}
+
+/* ====== Registration Section end ===== */
+
+
+
+/* ====== Event Section Start ===== */
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 4rem;
+    margin-top: 3rem;
+}
+.event {
+    border-radius: 5px;
+    overflow: hidden;
+}
+.event:hover .eventDate {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+.event:hover {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+.event:hover img {
+    transform: scale(1.1);
+}
+
+.eventInfo {
+    display: flex;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+.eventDate {
+    width: 90px;
+    height: 60px;
+    /* background-color: var(--white); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.eventLocation h2 {
+    font-size: 1.7rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+.eventLocation div i {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.eventLocation div span {
+    font-size: 1.5rem;
+}
+.eventLocation p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+.timegap {
+    margin-right: 2rem;
+}
+
+/* ====== Event Section end ===== */
+
+
+
+/* ====== Best Teacher Section Section ===== */
+
+.teachers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 3rem;
+    margin-top: 10rem;
+}
+.teacher {
+    background-color: var(--white);
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+.steve {
+    position: relative;
+    top: -70px;
+    border-radius: 10px;
+}
+.teacherInfo {
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.5;
+}
+.teacherInfo h3 {
+    font-size: 2.3rem;
+    color: var(--black);
+}
+.teacherInfo p {
+    font-size: 1.4rem;
+    color: var(--black);
+}
+.teacherContact {
+    text-align: center;
+}
+
+.teacherContact i {
+    font-size: 2rem;
+    padding: 5px;
+    margin-right: 5px;
+    color: var(--black);
+}
+.teacherContact i:hover {
+    color: var(--main-color);
+}
+
+
+/* ====== Best Teacher Section Section ===== */
+
+
+
+
+
 
 
 
@@ -549,6 +776,15 @@ img {
     .e-cards {
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
         gap: 2rem;
+    }
+    .teachers {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .teacher {
+        height: 260px;
+    }
+    .teacherInfo {
+        top: 55%;
     }
 }
 
@@ -616,6 +852,34 @@ img {
     .coursesContainer {
         margin-top: 0;
     }
+    .registration {
+        height: 100%;
+        flex-direction: column;
+        width: 100%;
+    }
+    .footerInfo {
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        justify-items: flex-start;
+    }
+    .regiTest {
+        text-align: center;
+    }
+    .years {
+        align-items: center;
+        justify-content: center;
+    }
+    .teachers {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .teacher {
+        width: 90%;
+        position: relative;
+        margin: 5rem auto 0;
+    }
+    .steve {
+        width: 65%;
+        left: 50px;
+    }
 
 }
 
@@ -650,5 +914,19 @@ img {
     .copyright {
         flex-direction: column;
         gap: 3rem;
+    }
+    .registration {
+        padding: 2rem;
+    }
+    form {
+        width: 350px;
+    }
+}
+
+
+
+@media screen and (max-width: 350px) {
+    form {
+        width: 300px;
     }
 }
