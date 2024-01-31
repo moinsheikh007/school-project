@@ -788,8 +788,12 @@ form select option {
 
 /* ===== News Section End ===== */
 
+
+/* ====== Why Choose Us Section Start ===== */
+
 .chooseContainer {
     display: flex;
+    /* flex-wrap: wrap; */
     gap: 4rem;
     margin: 5rem 0;
     align-items: center;
@@ -817,6 +821,22 @@ form select option {
 .video {
     flex-basis: 50%;
 }
+
+/* ====== Why Choose Us Section End ===== */
+
+
+/* ====== Sponser Section Start ===== */
+.sponser {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 3rem;
+}
+.sponser div:hover img {
+    transform: scale(1.1);
+}
+/* ====== Sponser Section End ===== */
+
+
 
 
 
@@ -976,6 +996,18 @@ form select option {
         display: flex;
         flex-direction: column;
     }
+    .chooseContainer {
+        flex-wrap: wrap;
+    }
+    .details {
+        flex-basis: 100%;
+    }
+    .video {
+        flex-basis: 100%;
+    }
+    .sponser {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
 
 }
 
@@ -1016,6 +1048,9 @@ form select option {
     }
     form {
         width: 350px;
+    }
+    .sponser {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
 
