@@ -13,3 +13,13 @@ menubar.addEventListener('click', function(){
 window.onscroll = () => {
     navlist.classList.remove('active');
 }
+
+document.getElementById('searchBtn').addEventListener('click', function(){
+    const search = document.querySelector('.search');
+    if(search.style.display === 'none') {
+        search.style.display = 'block'
+    }
+    else {
+        search.style.display = 'none'
+    }
+})
