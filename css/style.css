@@ -923,6 +923,10 @@ form select option {
     color: var(--main-color);
     cursor: pointer;
 }
+.blog button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
 
 .blogmenuInfo p {
     font-size: 1.6rem;
@@ -1031,9 +1035,87 @@ form select option {
     border: 5px solid var(--main-color);
 }
 
-
-
 /* ======= Blog Section End ====== */
+
+
+/* ===== Pages Section Start ==== */
+    .pages {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--light-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pages h1 {
+        font-size: 5rem;
+        color: var(--white);
+        font-weight: 900;
+        letter-spacing: 3px;
+    }
+/* ===== Pages Section Start ==== */
+
+
+/* ====== Contact Section Start ===== */
+.googleMap {
+    padding-bottom: 50%;
+    position: relative;
+}
+.googleMap iframe {
+    width: 100%;
+    height: 90%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.contact {
+    display: flex;
+    gap: 4rem;
+    /* align-items: center; */
+    justify-content: center;
+}
+.contact-form {
+    /* padding: 2rem; */
+    border-radius: 5px;
+    width: 100%;
+    background-color: transparent;
+}
+.contact-form h1 {
+    font-size: 3.5rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.contact-form label {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.contactInfo {
+    padding: 0 3rem;
+}
+.contactInfo h1 {
+    font-size: 3.5rem;
+    color: var(--black);
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+.contactInfo p  {
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.contactInfo div {
+    margin: 3rem 0;
+}
+.contactInfo div h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.contactInfo div p {
+    line-height: 2;
+}
+
+/* ====== Contact Section End ===== */
 
 
 
@@ -1210,15 +1292,18 @@ form select option {
     .sponser {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
-.blogsContainer {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "c c c c c c"
-        "m m m m m m"
-    ;
-    margin-top: 3rem;
-}
+    .blogsContainer {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "c c c c c c"
+            "m m m m m m"
+        ;
+        margin-top: 3rem;
+    }
+    .contact {
+        flex-direction: column;
+    }
 
 }
 
