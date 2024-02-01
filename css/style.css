@@ -837,6 +837,205 @@ form select option {
 /* ====== Sponser Section End ===== */
 
 
+/* ======= Blog Section Start ====== */
+
+.blogsContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    gap: 4rem;
+    margin-top: 10rem;
+    /* overflow-x: hidden; */
+    grid-template-areas: 
+        "m m m m c c c c c c c c"
+    ;
+}
+.blogMenu {
+    grid-area: m;
+}
+.blogs {
+    grid-area: c;
+}
+.blog {
+    margin-bottom: 6rem;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+.blog:hover {
+    box-shadow: var(--box-shadow);
+}
+.blogImg {
+    position: relative;
+}
+.blogText {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+}
+.blogText h4 {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+.blogText h1 {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+.blogLogo {
+    width: 150px;
+    mix-blend-mode: multiply;
+}
+.blogDate {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 4rem 0;
+}
+.blogDate div {
+    display: flex;
+    align-items: center;
+}
+.blogDate div span {
+    font-size: 1.7rem;
+    margin-left: 5px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+.blogDate div i {
+    font-size: 1.7rem;
+    color: var(--black);
+}
+.blogDate div img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.blog p {
+    font-size: 1.6rem;
+    line-height: 2;
+}
+.blog button {
+    border: var(--border);
+    margin-top: 2rem;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.blogmenuInfo p {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    /* border-bottom: var(--border); */
+}
+.blogmenuInfo input {
+    padding: 1.5rem 2rem;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.blogSocial {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-evenly;
+    margin: 2rem 0 4rem;
+}
+.blogSocial i {
+    /* background-color: var(--black); */
+    color: var(--main-color);
+    padding: 1.5rem;
+    border-radius: 50%;
+    font-size: 3rem;
+}
+.blogSocial i:hover {
+    opacity: .6;
+}
+.featureImg{
+    position: relative;
+}
+.featureText {
+    position: absolute;
+    top: 0;
+}
+.featureText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.featureText button {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 5px;
+}
+.featureText div {
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.featureText div p {
+    margin-top: 5rem;
+}
+.tags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 3rem 0;
+}
+.tags button {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 8px 1rem;
+    border-radius: 5px;
+}
+.tags button:hover {
+    background-color: var(--black);
+}
+.blogSubscribe {
+    line-height: 2;
+}
+.blogSubscribe h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.optional {
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--black);
+    margin: 4rem 0;
+    opacity: .6;
+}
+.blogCopyright h4 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+.featuredImg {
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--main-color);
+}
+
+
+
+/* ======= Blog Section End ====== */
+
+
 
 
 
@@ -897,6 +1096,9 @@ form select option {
     }
     .teacherInfo {
         top: 55%;
+    }
+    .blogSocial i {
+        padding: 1rem;
     }
 }
 
@@ -1008,6 +1210,15 @@ form select option {
     .sponser {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
+.blogsContainer {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "c c c c c c"
+        "m m m m m m"
+    ;
+    margin-top: 3rem;
+}
 
 }
 
