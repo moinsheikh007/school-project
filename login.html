@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- === Custom CSS File Link === -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- === Google Font CDN Link === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- === Box Icon CDN Link ===  -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+        <!-- ===== Header Section Start ==== -->
+        <header class="header" id="header">
+            <div class="headerInfo">
+                <div class="communicate">
+                    <h4>Have any question?</h4>
+                    <h3><i class='bx bx-phone'></i> +880 1537-510934</h3>
+                    <p><i class='bx bx-envelope'></i> mohinshei014@gmail.com</p>
+                </div>
+                <button id="registrationBtn">Registar Or Login</button>
+            </div>
+    
+            <nav class="navbar">
+                <a href="index.html" class="logo">Minor<span>.</span></a>
+                <ul class="navlist">
+                    <li class="active2"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="page.html">Page</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <div>
+                    <button><i class='bx bx-search' id="searchBtn"></i></button>
+                    <button><i class='bx bx-cart'></i></button>
+                    </div> 
+                </ul>
+                <div id="menuBar"><i class='bx bx-menu'></i></div>
+                
+            </nav>
+            <div class="search">
+                <input type="text" name="" id="SearchField" placeholder="Search Here...">
+                <i class='bx bx-search'></i>
+            </div>
+        </header>
+        <!-- ===== Header Section end ==== -->
+
+
+
+    <div class="logincontainer">
+        <div class="login">
+            <div class="loginInfo">
+                <div class="logo"><a href="#">MINOR<span>.</span></a></div>
+                <p>Login using social media to get quick <br>access</p>
+                <div class="socialLogin">
+                    <button class="facebookbtn">Signin with facebook</button>
+                    <button class="twitterbtn">Signin with Twiter</button>
+                    <button class="googlebtn">Signin with Google</button>
+                </div>
+            </div>
+    
+            <div class="loginform">
+                <h2>Login to Your Account</h2>
+                <p>Don't Have an Account? <a href="#">Sing Up Free!</a></p>
+                <form class="userLoginform">
+                    <input type="text" name="" id="" placeholder="Your Email">
+                    <input type="password" name="" id="" placeholder="Password">
+                    <div class="forgotpass">
+                        <label for="remember">
+                            <input type="checkbox" name="" id="">
+                            Remember Me
+                        </label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <input type="submit" value="Login with Email">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== Script File ==== -->
+    <script src="script/main.js"></script>
+</body>
+</html>

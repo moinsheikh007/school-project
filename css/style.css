@@ -8,7 +8,7 @@
     outline: none;
     text-transform: capitalize;
     text-decoration: none;
-    /* transition: 0.6s ease; */
+    transition: 0.6s ease;
 }
 :root {
     --main-color: #2980b9;
@@ -163,7 +163,7 @@ video {
 }
 .search {
     background-color: var(--main-color);
-    position: absolute;
+    position: fixed;
     top: 110px;
     width: 100%;
     padding: 1rem 10%;
@@ -216,6 +216,7 @@ video {
     margin-bottom: 1rem;
     -webkit-text-stroke-color: var(--main-color);
     -webkit-text-stroke-width: 2px;
+    text-shadow: 0px 5px 5px var(--main-color);
 
 }
 .home h3 {
@@ -1041,17 +1042,26 @@ form select option {
 /* ===== Pages Section Start ==== */
     .pages {
         width: 100%;
-        height: 100vh;
-        background-color: var(--light-color);
+        height: 110vh;
+        background-color: #130f40;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    .pages .leyar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        /* bottom: 80px; */
+        width: 100%;
+        height: 100%;
+    }
     .pages h1 {
-        font-size: 5rem;
+        font-size: 10rem;
         color: var(--white);
         font-weight: 900;
         letter-spacing: 3px;
+        z-index: 1;
     }
 /* ===== Pages Section Start ==== */
 
@@ -1119,7 +1129,115 @@ form select option {
 
 
 
+/* ====== Login Page Section Start ===== */
+.logincontainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3422aa 1%,#f98688 100%);
+}
+.login {
+    display: flex;
+}
+.loginInfo {
+    background-color: #130f40;
+    padding: 3rem;
+    border-radius: 5px;
+}
+.loginInfo .logo a {
+    color: var(--white);
+} 
+.loginInfo p {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 2rem 0;
+    line-height: 2;
+}
+.socialLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.socialLogin button {
+    padding: 1.3rem 0;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.facebookbtn {
+    background: linear-gradient(135deg, #3b26c1 1%,#ea4446 100%);
+    color: var(--white);
+}
+.facebookbtn:hover {
+    background: linear-gradient(-135deg, #3b26c1 1%,#ea4446 100%);
+    color: var(--white);
+}
+.twitterbtn {
+    background-image: linear-gradient(135deg, rgb(68, 202, 201) 0%,rgb(252, 255, 114) 100%);
+    color: var(--black);
+}
+.twitterbtn:hover {
+    background-image: linear-gradient(-135deg, rgb(68, 202, 201) 0%,rgb(252, 255, 114) 100%);
+}
+.googlebtn {
+    background-image: linear-gradient(90deg, rgb(114, 7, 74),rgb(232, 54, 104));
+    color: var(--white);
+}
+.twitterbtn:hover {
 
+}
+.googlebtn:hover {
+    background-image: linear-gradient(-90deg, rgb(114, 7, 74),rgb(232, 54, 104));
+}
+
+
+.loginform {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 5px;
+}
+.loginform h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.loginform p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--black);
+}
+.loginform p a {
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.userLoginform {
+    height: auto;
+}
+.userLoginform input[type='checkbox'] {
+    width: 25px;
+}
+.forgotpass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.forgotpass label {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+.forgotpass a {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+/* ====== Login Page Section End ===== */
 
 
 
@@ -1224,7 +1342,7 @@ form select option {
     }
     .search {
         display: block;
-        z-index: 1;
+        z-index: 100000;
         width: 250px;
         padding: 1rem;
         top: 150px;
@@ -1347,6 +1465,11 @@ form select option {
     }
     .sponser {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .login {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
     }
 }
 

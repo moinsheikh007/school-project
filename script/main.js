@@ -23,3 +23,10 @@ document.getElementById('searchBtn').addEventListener('click', function(){
         search.style.display = 'none'
     }
 })
+
+
+
+document.getElementById('registrationBtn').addEventListener('click', function () {
+    console.log('clicked')
+    window.location.href = 'login.html';
+})
